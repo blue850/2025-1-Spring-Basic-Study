@@ -27,7 +27,7 @@ public class MemberController {
 
     @PostMapping("/members/new")
     public String create(MemberForm form) { //Spring에서 자동으로 form.SetName 해줌
-        Member member = new Member();
+        Member member=new Member();
         member.setName(form.getName());
 
         memberService.join(member);
